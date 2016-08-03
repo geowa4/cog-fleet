@@ -8,10 +8,10 @@ setup(
     author_email="oss@bn.co",
     url="https://bn.co",
     packages=["fleet", "fleet.commands"],
-    requires=[
-        "pycog3 (>=0.1.27)",
-        "requests (>=2.10.0)",
-        "requests_unixsocket (>=0.1.5)"
+    install_requires=[
+        "pycog3>=0.1.27",
+        "requests>=2.10.0",
+        "requests_unixsocket>=0.1.5"
     ],
     keywords=[],
     classifiers=[
