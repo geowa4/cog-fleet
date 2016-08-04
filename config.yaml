@@ -8,8 +8,6 @@ docker:
   tag: 'latest'
   binds:
     - /var/run/fleet.sock:/var/run/fleet.sock
-permissions:
-  - fleet:read
 commands:
   unit:
     executable: /usr/bin/cog-command
@@ -17,5 +15,9 @@ commands:
     documentation: |
       Interact with Fleet units.
 
-      fleet:unit list
+      fleet:unit list [--filter <text>]
+    options:
+      filter:
+        type: string
+        required: false
     rules: [ 'allow' ]
